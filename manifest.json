@@ -1,0 +1,46 @@
+{
+ "manifest_version": 3,
+ 
+ "name": "SEOpera",
+ 
+ "description": "Easy to use meta data inspection tool for quick SEO insights.",
+ 
+ "version": "1.4",
+ 
+ "author": "Halil İbrahim Yücel,Cihat Murat Yüksel",
+ 
+ "action": {
+   "default_icon": "assets/img/seopera-logo.png",
+   "default_title": "SeOpera Check Insight",
+   "default_popup": "main.html"
+ },
+
+  "icons": {
+    "128": "assets/img/seopera-logo.png"
+  },
+
+ "content_scripts":[
+   {
+     "matches":["<all_urls>"],
+     "js":["js/jquery.min.js"]
+   }  
+  ],
+
+  "host_permissions": [
+    "*://www.google.com/"
+  ],
+
+
+ 
+ "permissions": [
+   "tabs",
+   "activeTab",
+   "scripting",
+   "storage",
+   "http://*/*",
+   "https://*/*"
+ ]
+
+
+ 
+}

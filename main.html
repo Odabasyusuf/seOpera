@@ -1,0 +1,445 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SEOpera</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="includes/style.css" rel="stylesheet" type="text/css">
+    <link href="includes/svgicons.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <div>
+      <div class="rounded p-4 antialiased font-sans" style="width: 230px; background: rgb(246, 245, 250); display: none;">
+        <div class="font-semibold w-full bg-white shadow rounded-lg p-3 mb-2">
+          <span class="ml-auto mr-auto">Loading...</span>
+        </div>
+      </div>
+      <div class="rounded p-4 antialiased font-sans" style="width: 680px; background: rgb(237, 240, 246);">
+        <div>
+          <div class="flex justify-center" style="display: none;">
+            <div class="
+            mt-2
+            border border-gray-300
+            rounded-lg
+            px-4
+            z-10
+            bg-white
+            shadow-xl
+            h-64
+            w-1/2
+            absolute
+            mx-auto
+          ">
+              <div class="flex justify-end">
+                <button class="
+                focus:outline-none
+                text-xl
+                font-semibold
+                detailed-light-gray
+              "> x </button>
+              </div>
+              <h1 class="text-center text-2xl text-purple-900 font-semibold"> Settings </h1>
+              <h2 class="text-center text-normal detailed-light-gray font-semibold"> To enable the feature below, Google requires we ask you for additional permissions. </h2>
+              <div class="mt-4 flex items-center justify-center">
+                <input type="checkbox" name="setting_highlight" id="" class="mr-2 leading-tight" style="transform: scale(1.25);">
+                <p class="
+                text-base
+                detailed-light-gray
+                tracking-tight
+                font-semibold
+              "> Always highlight nofollow links </p>
+              </div>
+              <button class="
+              hover:bg-purple-800
+              mt-4
+              container
+              text-2xl
+              focus:outline-none
+              bg-purple-900
+              rounded
+              text-white
+              px-4
+              py-2
+              font-bold
+              tracking-tight
+            "> Authorize </button>
+            </div>
+          </div>
+          <nav class="shadow rounded-lg p-6 mb-1" 
+               style="background: #8E2DE2;
+               background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+               background: linear-gradient(to right, #4A00E0, #8E2DE2);">
+
+            <ul class="flex items-center">
+              <li id='overview' class="cursor-pointer text-white font-semibold text-sm tracking-tight fill-current">
+                <a id='overview-button' class="inline-flex items-center">
+                  <svg class="svg-icon" viewBox="0 0 20 20">
+                    <path d="M17.431,2.156h-3.715c-0.228,0-0.413,0.186-0.413,0.413v6.973h-2.89V6.687c0-0.229-0.186-0.413-0.413-0.413H6.285c-0.228,0-0.413,0.184-0.413,0.413v6.388H2.569c-0.227,0-0.413,0.187-0.413,0.413v3.942c0,0.228,0.186,0.413,0.413,0.413h14.862c0.228,0,0.413-0.186,0.413-0.413V2.569C17.844,2.342,17.658,2.156,17.431,2.156 M5.872,17.019h-2.89v-3.117h2.89V17.019zM9.587,17.019h-2.89V7.1h2.89V17.019z M13.303,17.019h-2.89v-6.651h2.89V17.019z M17.019,17.019h-2.891V2.982h2.891V17.019z"></path>
+                  </svg> Overview </a>
+              </li>
+
+              <li id='h-tags' class="cursor-pointer text-white font-semibold text-sm tracking-tight fill-current">
+                <a id='h-tags-button' class="inline-flex items-center" style="margin-left:10px">
+                  <svg class="svg-icon" viewBox="0 0 20 20">
+                    <path d="M17.684,7.925l-5.131-0.67L10.329,2.57c-0.131-0.275-0.527-0.275-0.658,0L7.447,7.255l-5.131,0.67C2.014,7.964,1.892,8.333,2.113,8.54l3.76,3.568L4.924,17.21c-0.056,0.297,0.261,0.525,0.533,0.379L10,15.109l4.543,2.479c0.273,0.153,0.587-0.089,0.533-0.379l-0.949-5.103l3.76-3.568C18.108,8.333,17.986,7.964,17.684,7.925 M13.481,11.723c-0.089,0.083-0.129,0.205-0.105,0.324l0.848,4.547l-4.047-2.208c-0.055-0.03-0.116-0.045-0.176-0.045s-0.122,0.015-0.176,0.045l-4.047,2.208l0.847-4.547c0.023-0.119-0.016-0.241-0.105-0.324L3.162,8.54L7.74,7.941c0.124-0.016,0.229-0.093,0.282-0.203L10,3.568l1.978,4.17c0.053,0.11,0.158,0.187,0.282,0.203l4.578,0.598L13.481,11.723z"></path>
+                  </svg> H Tags </a>
+              </li>
+
+              <li id='quick-links' class="cursor-pointer text-white font-semibold text-sm tracking-tight fill-current">
+                <a id='quick-links-button' class="inline-flex items-center" style="margin-left:10px">
+                  <svg class="svg-icon" viewBox="0 0 20 20">
+                    <path d="M17.684,7.925l-5.131-0.67L10.329,2.57c-0.131-0.275-0.527-0.275-0.658,0L7.447,7.255l-5.131,0.67C2.014,7.964,1.892,8.333,2.113,8.54l3.76,3.568L4.924,17.21c-0.056,0.297,0.261,0.525,0.533,0.379L10,15.109l4.543,2.479c0.273,0.153,0.587-0.089,0.533-0.379l-0.949-5.103l3.76-3.568C18.108,8.333,17.986,7.964,17.684,7.925 M13.481,11.723c-0.089,0.083-0.129,0.205-0.105,0.324l0.848,4.547l-4.047-2.208c-0.055-0.03-0.116-0.045-0.176-0.045s-0.122,0.015-0.176,0.045l-4.047,2.208l0.847-4.547c0.023-0.119-0.016-0.241-0.105-0.324L3.162,8.54L7.74,7.941c0.124-0.016,0.229-0.093,0.282-0.203L10,3.568l1.978,4.17c0.053,0.11,0.158,0.187,0.282,0.203l4.578,0.598L13.481,11.723z"></path>
+                  </svg> Quick Links </a>
+              </li>
+
+            </ul>
+          </nav>
+          <hr class="mt-2 strangegray">
+
+          <div id="firstTab" class="bg-white shadow rounded-lg py-1 px-6 mb-2">
+            <!---->
+            <div class="mt-4">
+              <ul>
+                <li class="mb-6">
+                  <div class="w-full">
+                    <div class="flex justify-between">
+                      <span class="flex items-center">
+                        <p class="
+                        text-gray-900
+                        font-semibold
+                        leading-snug
+                        text-lg
+                      "> Title </p>
+                        <div class="tooltip">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM8 13C7.4 13 7 12.6 7 12C7 11.4 7.4 11 8 11C8.6 11 9 11.4 9 12C9 12.6 8.6 13 8 13ZM9 9C9 8.8 9 8.7 9.5 8.4C10.1 8 11 7.4 11 6C11 4.3 9.7 3 8 3C6.9 3 5.9 3.6 5.4 4.5L4.9 5.4L6.6 6.4L7.1 5.5C7.3 5.2 7.6 5 8 5C8.6 5 9 5.4 9 6C9 6.3 8.9 6.4 8.4 6.7C7.8 7.1 7 7.7 7 9V10H9V9Z" fill="#9191B4"></path>
+                          </svg>
+                          <span class="tooltiptext"> This is what shows as the text in your browser tab, and often in your page headings in search results (sometimes Google rewrite them). The current maximum that will display fully on search results is around 65 characters, or 568 pixels. </p>
+                          </span>
+                        </div>
+                      </span>
+                      <div>
+                        <span id='titlelen' class="">
+                          <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                            <path d="M7 1L1 7M1 1l6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="
+                  break-words
+                  mt-2
+                  overflow-y-auto
+                  text-base text-gray-700
+                  w-full
+                ">
+                    <span id='fill-title'></span>
+                  </div>
+                </li>
+                <li class="mb-6">
+                  <div class="w-full">
+                    <div class="flex justify-between">
+                      <span class="flex items-center">
+                        <p class="
+                        text-gray-900
+                        font-semibold
+                        leading-snug
+                        text-lg
+                      "> Description </p>
+                        <div class="tooltip">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM8 13C7.4 13 7 12.6 7 12C7 11.4 7.4 11 8 11C8.6 11 9 11.4 9 12C9 12.6 8.6 13 8 13ZM9 9C9 8.8 9 8.7 9.5 8.4C10.1 8 11 7.4 11 6C11 4.3 9.7 3 8 3C6.9 3 5.9 3.6 5.4 4.5L4.9 5.4L6.6 6.4L7.1 5.5C7.3 5.2 7.6 5 8 5C8.6 5 9 5.4 9 6C9 6.3 8.9 6.4 8.4 6.7C7.8 7.1 7 7.7 7 9V10H9V9Z" fill="#9191B4"></path>
+                          </svg>
+                          <span class="tooltiptext">A snippet of text designed to summarise a page. Though not critically important, an ideal length would be 70-155 characters.</span>
+                        </div>
+                      </span>
+                      <div>
+                        <span id='desclen' class="">
+                          <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2">
+                            <path d="M1 5l2 2 4-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg></span>
+                          <span id='pixelShow'></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="
+                  break-words
+                  mt-2
+                  overflow-y-auto
+                  text-base text-gray-700
+                  w-full
+                ">
+                    <span id='fill-description'>Missing</span>
+                  </div>
+                </li>
+                <li class="mb-6">
+                  <div class="flex justify-between">                  
+                    <span class="flex items-center">
+                      <img src="assets/img/link.png" width="24px" alt="">
+                      <p class="
+                      text-gray-900
+                      font-semibold
+                      leading-snug
+                      text-lg
+                      ml-1
+                    "> URL </p>
+                      <div class="tooltip">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM8 13C7.4 13 7 12.6 7 12C7 11.4 7.4 11 8 11C8.6 11 9 11.4 9 12C9 12.6 8.6 13 8 13ZM9 9C9 8.8 9 8.7 9.5 8.4C10.1 8 11 7.4 11 6C11 4.3 9.7 3 8 3C6.9 3 5.9 3.6 5.4 4.5L4.9 5.4L6.6 6.4L7.1 5.5C7.3 5.2 7.6 5 8 5C8.6 5 9 5.4 9 6C9 6.3 8.9 6.4 8.4 6.7C7.8 7.1 7 7.7 7 9V10H9V9Z" fill="#9191B4"></path>
+                        </svg>
+                        <span class="tooltiptext"> The URL of the page you are currently on. URL stands for Uniform Resource Locator. </span>
+                      </div>
+                    </span>
+                    <div id="indexable-bar">
+                      <div class="pr-2">
+                        <span id="indexable"></span>
+                        <!---->
+                        <!---->
+                      </div>
+                      <div class="absolute pl-1 tooltip">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 13c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm1-4c0-.2 0-.3.5-.6.6-.4 1.5-1 1.5-2.4 0-1.7-1.3-3-3-3-1.1 0-2.1.6-2.6 1.5l-.5.9 1.7 1 .5-.9c.2-.3.5-.5.9-.5.6 0 1 .4 1 1 0 .3-.1.4-.6.7C7.8 7.1 7 7.7 7 9v1h2V9z" fill="#fff"></path>
+                        </svg>
+                        <span class="tooltiptextbottom font-normal">
+                          <p class="px-2"> Search engines like Google can index this page. There is no Robots Meta Tag or X-Robots-Tag in place to suggest otherwise. An exception would be if you found this page behind a log-in screen. </p>
+                          <!---->
+                          <!---->
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="
+                  break-words
+                  mt-2
+                  overflow-y-auto
+                  text-base text-gray-700
+                  w-full
+                ">
+                    <span id='CurrentUrl'></span>
+                  </div>
+                </li>
+                <li class="mb-6">
+                  <div class="flex justify-between">
+                    <span class="flex items-center">
+                      <p class="
+                      text-gray-900
+                      font-semibold
+                      leading-snug
+                      text-lg
+                    "> Canonical </p>
+                      <div class="tooltip">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM8 13C7.4 13 7 12.6 7 12C7 11.4 7.4 11 8 11C8.6 11 9 11.4 9 12C9 12.6 8.6 13 8 13ZM9 9C9 8.8 9 8.7 9.5 8.4C10.1 8 11 7.4 11 6C11 4.3 9.7 3 8 3C6.9 3 5.9 3.6 5.4 4.5L4.9 5.4L6.6 6.4L7.1 5.5C7.3 5.2 7.6 5 8 5C8.6 5 9 5.4 9 6C9 6.3 8.9 6.4 8.4 6.7C7.8 7.1 7 7.7 7 9V10H9V9Z" fill="#9191B4"></path>
+                        </svg>
+                        <span class="tooltiptext" style="padding-left: 10px !important; padding-right: 10px !important;"> A canonical tag tells search engines like Google what the 'preferred' or 'main' URL of a page should be. </span>
+                      </div>
+                    </span>
+                    <div class="
+                    flex
+                    justify-between
+                    items-center
+                    h-6
+                    items-center
+                    px-6
+                    rounded-full
+                    text-center text-white text-xs
+                    font-semibold
+                  ">
+                      <!---->
+                      <div class="pr-2 pl-2">
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="
+                  break-words
+                  mt-2
+                  overflow-y-auto
+                  text-base text-gray-700
+                  w-full
+                ">
+                    <span id='showCanonicalUrl'>Missing</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!---->
+            <!---->
+          </div>
+          <div id="hTagsTab" class="bg-white shadow rounded-lg py-1 px-6 mb-2">
+            <!---->
+            <div class="mt-4">
+              <ul>
+                <li class="mb-6">
+                  <div class="w-full">
+                    <div class="flex justify-between"  style="border-bottom:1px solid rgb(221, 221, 221)">
+                      <span class="flex items-center">
+                        <p class="text-gray-900 font-semibold leading-snug text-lg"> H Tags </p>
+                      </span>
+
+                    </div>
+                  </div>
+
+                <li class="mb-6">
+                  <div class="w-full">
+                    <div class="flex justify-between">
+                      <span class="flex items-center">
+                        <p class="
+                        text-gray-900
+                        font-semibold
+                        leading-snug
+                        text-lg
+                      "> H1 </p>
+                        <div class="tooltip">
+                          <span class="tooltiptext"> H1 Tagları </p></span>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="
+                  break-words
+                  mt-2
+                  overflow-y-auto
+                  text-base text-gray-700
+                  w-full
+                ">
+                    <span id='h1-tags'></span>
+                    <span id='text-temp'></span>
+                  </div>
+                </li>
+
+                </li>
+              </ul>
+            </div>
+            <!---->
+            <!---->
+          </div>
+          <div id="secondTab" class="bg-white shadow rounded-lg py-1 px-6 mb-2">
+            <!---->
+            <div class="mt-4">
+              <ul>
+                <li class="mb-6">
+                  <div class="w-full">
+                    <div class="flex justify-between"  style="border-bottom:1px solid rgb(221, 221, 221)">
+                      <span class="flex items-center">
+                        <p class="text-gray-900 font-semibold leading-snug text-lg"> Quick Links </p>
+                      </span>
+                      
+                    </div>
+                  </div>
+                  <div class="break-words mt-6 overflow-y-auto text-base text-gray-700 w-full">
+                    <h1 style="display: flex; font-weight: bold;">
+                      <svg viewBox="-1.7422960456529886 -1.8059591651793312 285.554592091306 266.85191833035867" xmlns="http://www.w3.org/2000/svg" width="32" height="28"><linearGradient id="a" gradientTransform="matrix(.5 0 0 -.5 -710.34 -5458.18)" gradientUnits="userSpaceOnUse" x1="1766.94" x2="1943.97" y1="-11285.72" y2="-11462.75"><stop offset="0" stop-color="#212121" stop-opacity=".2"/><stop offset="1" stop-color="#212121" stop-opacity="0"/></linearGradient><radialGradient id="b" cx="1452.8" cy="-10980.17" gradientTransform="matrix(.5 0 0 -.5 -710.34 -5458.18)" gradientUnits="userSpaceOnUse" r="680.38"><stop offset="0" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><path d="M272.73 37.23v179.68a18.58 18.58 0 0 1-18.57 18.59H18.65A18.58 18.58 0 0 1 .06 216.94V37.23z" fill="#e1e1e1"/><path d="M18.65 0h235.5a18.58 18.58 0 0 1 18.58 18.56v18.67H.07V18.59A18.58 18.58 0 0 1 18.64 0z" fill="#c2c2c2"/><path d="M254.15 0H18.65A18.64 18.64 0 0 0 .07 18.59v1.48A18.64 18.64 0 0 1 18.65 1.54h235.5a18.64 18.64 0 0 1 18.58 18.59v-1.48A18.64 18.64 0 0 0 254.15 0z" fill="#fff" fill-opacity=".2"/><path d="M.07 37.23h272.66v1.48H.07z" fill="#212121" fill-opacity=".1"/><path d="M136.3 92.96a99 99 0 0 0-99 99v.13c0 2.08-.12 4.64 0 6.2h43.25a54.87 54.87 0 0 1 0-6.2 55.81 55.81 0 0 1 85.06-47.45l31.12-31.12a98.76 98.76 0 0 0-60.44-20.57z" fill="#4285f4"/><path d="M196.73 113.46l-31.14 31.14a55.74 55.74 0 0 1 26.56 47.45 54.87 54.87 0 0 1 0 6.2h43.39c.12-1.48 0-4.12 0-6.2a99 99 0 0 0-38.81-78.59z" fill="#f44336"/><circle cx="24.85" cy="18.59" fill="#eee" r="6.2"/><circle cx="49.65" cy="18.59" fill="#eee" r="6.2"/><path d="M254.18 233.93H18.59A18.64 18.64 0 0 1 0 215.34v1.48a18.64 18.64 0 0 0 18.59 18.59h235.59a18.64 18.64 0 0 0 18.55-18.59v-1.48a18.64 18.64 0 0 1-18.55 18.59z" fill="#212121" fill-opacity=".1"/><path d="M197.01 117.23a3.05 3.05 0 0 0 .59-1.81 3.11 3.11 0 0 0-3.1-3.1 3 3 0 0 0-1.91.68l-67.56 52a18.58 18.58 0 1 0 27.24 24.33l44.73-72.1z" fill="#9e9e9e"/><path d="M125.03 166.57l67.56-52a3.05 3.05 0 0 1 4.88 1.62 2.88 2.88 0 0 0 .12-.74 3.11 3.11 0 0 0-3.1-3.1 3 3 0 0 0-1.91.68l-67.54 52a18.51 18.51 0 0 0-7.24 14.71v.83a18.57 18.57 0 0 1 7.23-14z" fill="#fff" opacity=".2"/><path d="M197.01 117.23l-44.72 72.14a18.57 18.57 0 0 1-34.43-8.79v.71a18.58 18.58 0 0 0 34.48 9.64l44.72-72.14a3.05 3.05 0 0 0 .59-1.81 2.74 2.74 0 0 0-.12-.8 3.29 3.29 0 0 1-.52 1.05z" fill="#212121" opacity=".2"/><path d="M206.24 141.32a3.05 3.05 0 0 1 0 3.68l-44.72 72.14a18.57 18.57 0 0 1-27.94 4.45l41.62 41.62h88.19A18.58 18.58 0 0 0 282 244.65V217.1z" fill="url(#a)" transform="translate(-9.27 -27.77)"/><path d="M282 46.36a18.58 18.58 0 0 0-18.57-18.59H27.92A18.58 18.58 0 0 0 9.34 46.35v198.3a18.58 18.58 0 0 0 18.57 18.59h235.51A18.58 18.58 0 0 0 282 244.69z" fill="url(#b)" transform="translate(-9.27 -27.77)"/></svg>
+                      <a id="page_speed_insight" style="margin-left: 10px;font-size: 16px;margin-top: 3px;" href="#" target="_blank">Page Speed Insight </a>
+                    </h1>
+                  
+                  </div>
+
+                  <div class="break-words mt-6 overflow-y-auto text-base text-gray-700 w-full">
+                    <h1 style="display: flex; font-weight: bold;">
+                      <img src="assets/img/rich_snippet.png" width="32" height="28">
+                      <a id="rich_snippet" style="margin-left: 10px;font-size: 16px;margin-top: 3px;" href="#" target="_blank">Rich Snippet Test</a>
+                    </h1>
+                  </div>
+
+                  <div class="break-words mt-6 overflow-y-auto text-base text-gray-700 w-full">
+                    <h1 style="display: flex; font-weight: bold;">
+                      <img src="assets/img/mobile_friendly.png" width="32" height="28"/>
+                      <a id='mobile_friendly' style="margin-left: 10px;font-size: 16px;margin-top: 3px;" href="#" target="_blank">Mobile Friendly Test </a>
+                    </h1>
+                  </div>
+
+                  <div class="break-words mt-6 overflow-y-auto text-base text-gray-700 w-full">
+                    <h1 style="display: flex; font-weight: bold;">
+                      <img src="assets/img/google-logo.png" width="32" height="28"/>
+                      <a id='search_result' style="margin-left: 10px;font-size: 16px;margin-top: 3px;" href="#" target="_blank">Search Result</a>
+                    </h1>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+            <!---->
+            <!---->
+          </div>
+        </div>
+
+        <div id='robots-tag' class="bg-white shadow rounded-lg py-6 px-6 mb-2">
+          <li class="flex">
+            <div class="w-full pr-10 flex flex-col">
+              <span class="flex items-center">
+                <img src="assets/img/tag.png" width="24px" alt="">
+                <p class="text-gray-900 ml-1 font-semibold leading-snug text-lg"> Robots Tag </p>
+                <div class="tooltip">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-3">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM8 13C7.4 13 7 12.6 7 12C7 11.4 7.4 11 8 11C8.6 11 9 11.4 9 12C9 12.6 8.6 13 8 13ZM9 9C9 8.8 9 8.7 9.5 8.4C10.1 8 11 7.4 11 6C11 4.3 9.7 3 8 3C6.9 3 5.9 3.6 5.4 4.5L4.9 5.4L6.6 6.4L7.1 5.5C7.3 5.2 7.6 5 8 5C8.6 5 9 5.4 9 6C9 6.3 8.9 6.4 8.4 6.7C7.8 7.1 7 7.7 7 9V10H9V9Z" fill="#9191B4"></path>
+                  </svg>
+                  <span class="tooltiptext"> Let's you control if an individual page should be indexed in search results. </span>
+                </div>
+            
+              </span>
+              <div class="
+              mt-3
+              w-full
+              text-sm text-gray-700
+              font-medium
+              overflow-y-auto
+              break-words
+            ">
+                <span id='showRobots'></span>
+              </div>
+            </div>
+          </li>
+        </div>
+        <div id='lang' class="bg-white shadow rounded-lg py-6 px-6 mb-2">
+          <li class="flex">
+            <div class="w-full flex flex-col">
+             
+              <span class="flex items-center">
+                <img src="assets/img/translate.png" width="24px" alt="">
+                <p class="ml-2 text-gray-900 font-semibold leading-snug text-lg">Lang:
+                  <div class="
+                  ml-1
+                      w-full
+                      text-lg text-gray-700
+                      font-medium
+                      overflow-y-auto
+                    ">
+                    <span id='showLang'></span>
+                  </div>
+                </p>
+              </span>
+              
+            </div>
+          </li>
+        </div>
+        <div id='footer-bar' class="bg-white shadow rounded-lg p-6 mb-2">
+          <div>
+            <div class="w-full flex">
+              <div class="text-sm detailed-light-gray">
+                <a href="#" target="_blank" id='showRobotsTxt' class="underline mr-10">Robots.txt</a>
+                <a href="#" target="_blank" id='showSitemap' class="underline">Sitemap.xml</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end w-full items-center">
+          
+          <img src="assets/img/seopera-logo.png?v=2" class="cursor-pointer w-24 h-4" style="width: 26px;height: 25px;">
+          <span class="text-gray-500 text-sm mr-1 ml-1"> <a style='color: black;' target="_blank" href="https://webtures.com/tr/seo-araclari">SEOpera</a> v1.3 
+            |
+            <a target='_blank' href="https://chrome.google.com/webstore/detail/seopera/mghmnnheclfcjmamnlcpphdpkegkahgb">
+            Rate Us</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script type="text/javascript" src="/js/popup.js"></script>
+    <script type="text/javascript" src="/js/algorithm.js"></script>
+    <script type="text/javascript" src="/js/background.js"></script>
+    <script type="text/javascript" src="/data/hTags.js"></script>
+  </body>
+</html>
