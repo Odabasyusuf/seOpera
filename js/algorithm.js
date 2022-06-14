@@ -76,51 +76,40 @@ chrome.tabs.query({active:true, currentWindow:true}, function(tabs){
     });
 
     // H Tags Deneme
-    chrome.scripting.executeScript({target: {tabId: tab}, files: ["data/hTags.js"]}, function(results) {
-        if(results == null) {
-            document.getElementById("h1-tags").innerHTML = "Htags not set";
-        }else {
-            const h1Tagss = results[0]['result'];
+    //  chrome.scripting.executeScript({target: {tabId: tab}, files: ["data/hTags.js"]}, function(results) {
+    //      if(results == null) {
+    //          document.getElementById("h1-tags").innerHTML = "Htags not set";
+    //      }else {
+    //          const h1Tagss = results[0]['result'];
             //             document.getElementById("h1-tags").innerHTML = JSON.stringify(h1Tagss);
             // document.getElementById("h1-tags").innerHTML = document.getElementsByTagName("h1").length;
 
-        }
-    });
+    //      }
+    //  });
 
     // background js deneme
-    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        if(request.action === "getSource") {
+    // chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    //     if(request.action === "getSource") {
 
-            document.getElementById("text-temp").innerHTML = request.source;
-            sendResponse({sourceCode: document.documentElement.outerHTML});
-        }
-    });
+    //         document.getElementById("text-temp").innerHTML = request.source;
+    //         sendResponse({sourceCode: document.documentElement.outerHTML});
+    //     }
+    // });
 
     // background js deneme 2
-    const activeTabId=tabs [0].id
-    let tempHCount = 0;
-    chrome.scripting.executeScript(
-    {
-        target:{tabId:activeTabId},
-        function:()=> {
+    //  const activeTabId=tabs [0].id
+   //   let tempHCount = 0;
+   //   chrome.scripting.executeScript(
+   //   {
+   //       target:{tabId:activeTabId},
+   //       function:()=> {
             // document.body.style.backgroundColor = "red";
             // alert(document.getElementsByTagName("h2").length)
             //tempHCount = document.getElementsByTagName("h3").length;
             //alert('H1 Sayısı: ' + tempHCount);
-        },
-    });
+    //      },
+    //  });
     //document.getElementById('h1-tags').innerHTML = tempHCount;
-
-    // background js deneme 3
-    chrome.scripting.executeScript({target: {tabId: activeTabId}, files: ["data/h1Count.js"]}, function(results) {
-       if(results == null || results[0]['result'] == null) {
-            document.getElementById("h1-tags").innerHTML = "Htag not set";
-        }else{
-            const h1Count = results[0]['result'];
-            document.getElementById("h1-count").innerHTML = h1Count;
-        }
-    });
-
 
      // Robots Tags
      chrome.scripting.executeScript({target: {tabId: tab}, files: ["data/indexChecker.js"]}, function(results) {
